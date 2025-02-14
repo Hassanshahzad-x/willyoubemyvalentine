@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Valentine's Question ❤️</title>
+      <link rel="stylesheet" href="love.css">
+      <link href="https://fonts.googleapis.com/css2?family=Loved+by+the+King&display=swap" rel="stylesheet">
+   </head>
+
+   <body>
+      <div class="container" id="questionContainer">
+         <h1>My Dearest Fatima, Will You Be My Valentine? 🌹</h1>
+         <div class="buttons">
+            <button id="yesBtn">YES! ❤️</button>
+            <button id="noBtn">No 😢</button>
+         </div>
+      </div>
+
+      <div class="container hidden" id="successContainer">
+         <div class="emoji-container">🎁🌹🍫💝🎀</div>
+         <p id="successMessage">
+            Happy Valentine’s Day! 💖 I just wanted to take a moment to let you know how much I appreciate you.<br /><br /> 
+            You’re such an amazing person—kind, funny, and just really great to be around. Every conversation with you makes my day a little better, and I’m really grateful to have you in my life. <br/><br/>
+            
+            I hope the coming time brings you lots of smiles, sweet surprises, and all the happiness you deserve. Maybe next year, I’ll have an even better reason to celebrate with you. 😉💐
+            <br /><br />Wishing you a beautiful day!<br /><br />
+            
+            — Your Stupid Hassan 💕
+         </p>
+      </div>
+
+      <script>
+         const yesBtn = document.getElementById('yesBtn');
+         const noBtn = document.getElementById('noBtn');
+         const questionContainer = document.getElementById('questionContainer');
+         const successContainer = document.getElementById('successContainer');
+
+         let yesSize = 1;
+         let noSize = 1;
+
+         noBtn.addEventListener('click', () => {
+            yesSize += 0.2;
+            noSize = Math.max(0.8, noSize - 0.1);
+
+            yesBtn.style.transform = `scale(${yesSize})`;
+            noBtn.style.transform = `scale(${noSize})`;
+
+            // Add random movement
+            const x = Math.random() * 100 - 50;
+            const y = Math.random() * 100 - 50;
+            noBtn.style.transform += ` translate(${x}px, ${y}px)`;
+         });
+
+         yesBtn.addEventListener('click', () => {
+            questionContainer.classList.add('hidden');
+            successContainer.classList.remove('hidden');
+            document.body.style.background = "#ff69b4";
+            document.body.style.backgroundImage = "none";
+         });
+      </script>
+   </body>
+
+</html>

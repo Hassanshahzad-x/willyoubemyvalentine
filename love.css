@@ -1,0 +1,117 @@
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+body {
+   background-color: #ffd1dc;
+   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' width='24' height='24'%3E%3Cpath fill='rgba(255,105,180,0.1)' d='M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z'/%3E%3C/svg%3E");
+   background-repeat: repeat;
+   background-size: 120px;
+   font-family: 'Loved by the King', cursive;
+   min-height: 100vh;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   text-align: center;
+   padding: 20px;
+   transition: background 0.5s ease;
+}
+
+.container {
+   background: rgba(255, 255, 255, 0.9);
+   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' width='24' height='24'%3E%3Cpath fill='rgba(255,105,180,0.1)' d='M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z'/%3E%3C/svg%3E");
+   padding: 30px;
+   border-radius: 20px;
+   box-shadow: 0 0 20px rgba(255, 0, 127, 0.2);
+   max-width: 400px;
+   width: 100%;
+   animation: bounce 2s infinite;
+   backdrop-filter: blur(5px);
+}
+
+h1 {
+   color: #ff69b4;
+   margin-bottom: 20px;
+   font-size: 2rem;
+}
+
+.buttons {
+   display: flex;
+   justify-content: center;
+   gap: 15px;
+   margin-top: 20px;
+}
+
+button {
+   padding: 15px 30px;
+   border: none;
+   border-radius: 15px;
+   font-size: 1.2rem;
+   cursor: pointer;
+   transition: all 0.3s ease;
+   font-family: inherit;
+}
+
+#yesBtn {
+   background: #ff69b4;
+   color: white;
+}
+
+#noBtn {
+   background: #ff4444;
+   color: white;
+}
+
+.hidden {
+   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' width='24' height='24'%3E%3Cpath fill='rgba(255,105,180,0.1)' d='M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z'/%3E%3C/svg%3E");
+   display: none !important;
+}
+
+#successMessage {
+   font-size: 1.5rem;
+   color: #ff69b4;
+   line-height: 1.5;
+}
+
+.emoji-container {
+   font-size: 3rem;
+   margin: 20px 0;
+   animation: float 3s ease-in-out infinite;
+}
+
+@keyframes bounce {
+
+   0%,
+   100% {
+      transform: translateY(0);
+   }
+
+   50% {
+      transform: translateY(-10px);
+   }
+}
+
+@keyframes float {
+
+   0%,
+   100% {
+      transform: translateY(0px);
+   }
+
+   50% {
+      transform: translateY(-20px);
+   }
+}
+
+@media (max-width: 480px) {
+   .container {
+      padding: 20px;
+   }
+
+   h1 {
+      font-size: 1.5rem;
+   }
+}
